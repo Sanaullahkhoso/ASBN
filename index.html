@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASBN</title>
+</head>
+
+<BOdy>
+
+    <style>
+        #main {
+            width: 75%;
+            margin: auto;
+            font-family: 'Baskerville Old Face';
+
+        }
+
+        #navbar {
+            width: 100%;
+            margin: 0px;
+            align-items: center;
+        }
+
+        #logo {
+            width: 80px;
+            height: 80px;
+            margin: 0px 0px 0px 120px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            margin: 10px;
+        }
+
+        .nav-menu {
+            position: absolute;
+            width: 50%px;
+            height: 40px;
+            margin: -44px 100px 0px 400px;
+
+        }
+       
+
+        .nav-menu a {
+            color: rgb(67, 68, 80);
+            font-size: 20px;
+            margin: 10px 0px 0px 10px;
+            text-decoration: none;
+            padding: 10px;
+
+        }
+      
+
+       .nav-menu a:hover {
+            color: white;
+            background-color: green;
+            font-size: 22px;
+            transition: 1s;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 7px solid blue;
+        }
+
+        .nav-menu .active {
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 5px solid green;
+
+        }
+        #search{
+            width: 170px;
+            height: 40px;
+            margin: -10px 10px;
+            position: absolute;
+            background-color: rgb(241, 233, 233);
+            border-radius: 80px;
+            border: none;
+            border-color:rgb(241, 233, 233);;
+        }
+        #search-icon{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            margin: -7px 130px;
+            
+        }
+
+        #header {
+            width: 100%;
+            height: auto;
+            display: flex;
+        }
+
+        .h-img {
+            width: 74.1%;
+            height: 450px;
+            filter: brightness(60%);
+        }
+        @media screen and (max-width: 700px) {
+        .h-img {
+        width: 74%;
+        margin-left: 50px;;
+
+}  
+        }
+        #slogan {
+            width: 600px;
+            font-size: 50px;
+            position: absolute;
+            text-align: center;
+            color: white;
+            margin: 100px 270px;
+        }
+
+        h4 {
+            position: absolute;
+            text-align: center;
+            color: white;
+            margin: 150px 340px;
+        }
+
+        #os {
+            width: 150px;
+            height: 35px;
+            padding: 15px;
+            position: absolute;
+            font-size: 20px;
+            line-height: 5px;
+            color: white;
+            margin: -210px 480px;
+            background-color: rgb(30, 48, 148);
+            border: none;
+            border-radius: 5px;
+        }
+
+        #box {
+            width: 74%;
+            background-color: rgb(223, 219, 219);
+            position: absolute;
+            margin: 460px 199px;
+            height: 320px;
+
+        }
+       
+        #box a:hover{
+            padding: 10px;
+
+        }
+ 
+
+        .ard {
+            width: 135px;
+            height: 135px;
+            position: absolute;
+            margin: 45px 100px;
+            
+        }
+
+        .software {
+            width: 120px;
+            height: 120px;
+            margin: 50px 330px;
+        }
+
+        .books {
+            width: 230px;
+            height: 120px;
+            margin: 50px 550px;
+        }
+
+        .notes {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            margin: 50px 880px;
+        }
+
+        #detail {
+            width: 74%;
+            position: absolute;
+            margin: 650px 210px;
+            height: 200px;
+
+        }
+
+        #about1 {
+            width: 200px;
+            margin: 0px 80px;
+            position: absolute;
+
+        }
+
+        #about2 {
+            width: 200px;
+            margin: 0px 300px;
+            position: absolute;
+        }
+
+        #about3 {
+            width: 200px;
+            margin: 0px 590px;
+            position: absolute;
+        }
+
+        #About4 {
+            width: 200px;
+            position: absolute;
+            margin: 0px 860px;
+        }
+        #offer{
+            width: 74%;
+            height: 400px;
+            position: absolute;
+            background-color: rgb(50, 54, 77);
+            margin: 780px 199px;
+        }
+
+        .Ai {
+            width: 220px;
+            height: 200px;
+            position: absolute;
+            margin: 110px 200px;
+            border: 3px solid white;
+            border-radius: 50px 0px 50px 0px  ;
+        }
+        .php {
+            width: 225px;
+            height: 200px;
+            position: absolute;
+            margin: 110px 450px;
+            border: 3px solid white;
+            border-radius: 50px 0px 50px 0px  ;
+        }
+        .web {
+            width: 220px;
+            height: 200px;
+            position: absolute;
+            margin: 110px 700px;
+            border: 3px solid white;
+            border-radius: 50px 0px 50px 0px  ;
+        }
+        #course{
+            margin: 30px 100px;
+            color: rgb(255, 166, 0);
+            font-size: 40px;
+            position: absolute;
+            font-weight: bold;
+        }
+        #more{
+            width: 100px;
+            height: 40px;
+            background-color: rgb(60, 60, 211);
+            color: white;
+            position: absolute;
+            margin: 30px 890px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        #course1{
+            width: 200px;
+            position: absolute;
+            margin: 330px 220px;
+            color: rgb(255, 166, 0);
+            font-weight: bold;
+        }
+       
+        #course2{
+            width: 200px;
+            position: absolute;
+            margin: 330px 470px;
+            color: rgb(255, 166, 0);
+            font-weight: bold;
+        }
+        #course3{
+            width: 200px;
+            position: absolute;
+            margin: 330px 720px;
+            color: rgb(255, 166, 0);
+            font-weight: bold;
+        }
+        #detail1{
+            width: 150px;
+            position: absolute;
+            margin: 350px 220px;
+            color: rgb(255, 255, 255);
+            
+        }
+        #detail2{
+            width: 150px;
+            position: absolute;
+            margin: 350px 470px;
+            color: rgb(255, 255, 255);
+           
+        }
+        #detail3{
+            width: 150px;
+            position: absolute;
+            margin: 350px 720px;
+            color: rgb(255, 255, 255);
+            
+        }
+        #body3{
+            width: 74%;
+            height: 300px;
+            background-color:rgb(223, 219, 219); 
+            margin: 1180px 199px;
+            border: none;
+            border-bottom: 2px solid rgb(138, 136, 136);
+            position: absolute;
+        }
+        #body4{
+            width: 74%;
+            height: 270px;
+            background-color:rgb(223, 219, 219); 
+            margin: 1482px 199px;
+            border: none;
+            position: absolute;
+        }
+        #offering{
+            width: 400px;
+            margin: 30px 450px;
+            color: rgb(1, 154, 255);
+            font-size: 40px;
+            position: absolute;
+            font-weight: bold;
+        }
+        #option{
+            width: 700px;
+            margin: 80px 220px;
+            color: rgb(1, 154, 255);
+            font-size: 20px;
+            position: absolute;
+            
+        }
+        #option1{
+            color: rgb(1, 154, 255);
+            margin: 160px 250px;
+            position: absolute;
+        }
+        #option2{
+            color: rgb(1, 154, 255);
+            width: 200px;
+            margin: 160px 530px;
+            position: absolute;
+        }
+        #option3{
+            color: rgb(1, 154, 255);
+            width: 200px;
+            margin: 160px 800px;
+            position: absolute;
+
+        }
+
+        #define1{
+            
+            margin: 180px 230px;
+            position: absolute;
+            width: 200px;
+        }
+        #define2{
+            
+            width: 200px;
+            margin: 180px 510px;
+            position: absolute;
+        }
+        #define3{
+            
+            width: 200px;
+            margin: 180px 780px;
+            position: absolute;
+
+        }
+        #team{
+            width: 300px;
+            margin: 40px 520px;
+            color: rgb(1, 154, 255);
+            font-size: 30px;
+            position: absolute;
+            font-weight: bold;
+        }
+        #team-define{
+            width: 800px;
+            margin: 70px 220px;
+            color: black;
+            
+            position: absolute;
+        }
+        .team1{
+            width: 270px;
+            height: 200px;
+            position: absolute;
+            margin: 110px 320px;
+        }
+        .team2{
+            width: 270px;
+            height: 200px;
+            position: absolute;
+            margin: 100px 450px;
+        }
+        .team3{
+            width: 270px;
+            height: 200px;
+            position: absolute;
+            margin: 100px 580px;
+        }
+        #footer{
+            background-color: rgb(50, 54, 77);
+            width: 74%;
+            height: 370px;
+            position: absolute;
+            margin: 1750px 199px;
+        }
+        #box1{
+            width: 270px;
+            height: 300px;
+            margin: 50px 20px;
+            position: absolute;
+        }
+        #box2{
+            width: 250px;
+            height: 300px;
+            margin: 50px 310px;
+            position: absolute;
+        }
+        #box3{
+            width: 250px;
+            height: 300px;
+            margin: 50px 580px;
+            position: absolute;
+        }
+        #box4{
+            width: 250px;
+            height: 300px;
+            margin: 50px 850px;
+            position: absolute;
+        }
+        #bird{
+            width: 200px;
+            margin: 15px 20px;
+            color: rgb(255, 166, 0);
+            position: absolute;
+            font-weight: bold;
+            
+        }
+        .para{
+            width: 160px;
+            margin:40px 30px;
+            line-height: 30px;
+            position: absolute;
+            color: white;
+            border-bottom: 2px solid rgb(240, 236, 236);
+        }
+        .para2{
+            width: 160px;
+            margin:180px 30px;
+            line-height: 20px;
+            position: absolute;
+            color: white;
+            border-bottom: 2px solid rgb(240, 236, 236);
+        }
+        #news{
+            width: 200px;
+            margin: 15px 20px;
+            color: rgb(255, 166, 0);
+            position: absolute;
+            font-weight: bold;
+        }
+        .para3{
+            width: 230px;
+            margin:40px 10px;
+            line-height: 20px;
+            position: absolute;
+            color: white;
+            border-bottom: 2px solid rgb(240, 236, 236);
+        }
+        .email{
+            margin: 140px 30px;
+            color: rgb(1, 154, 255);
+            width: 200px;
+        }
+        #in-email{
+            position: absolute;
+            margin: -130 30px;
+        }
+        #s-up{
+            width: 70px;
+            position: absolute;
+            margin: -100 120px;
+            background-color: rgb(4, 134, 255);
+            border: none;
+        }
+        #project{
+            width: 200px;
+            margin: 15px 20px;
+            color: rgb(255, 166, 0);
+            position: absolute;
+            font-weight: bold;
+        }
+        #ractangle1{
+            width: 60px;
+            height: 60px;
+            margin: 50px 20px;
+            position: absolute;
+            background-color: white;
+        }
+        .ract-para1{
+            width: 100px;
+            margin:30px 100px;
+            border-bottom: 2px solid white;
+            position: absolute;
+            color: white;
+            line-height: 50px;
+         
+        }
+        #ractangle2{
+            width: 60px;
+            height: 60px;
+            margin: 130px 20px;
+            position: absolute;
+            background-color: white;
+        }
+        #ractangle3{
+            width: 60px;
+            height: 60px;
+            margin: 210px 20px;
+            position: absolute;
+            background-color: white;
+        }
+
+
+        #contact{
+            width: 200px;
+            margin: 15px 20px;
+            color: rgb(255, 166, 0);
+            position: absolute;
+            font-weight: bold;
+        }
+        #call{
+            width: 35px;
+            height: 35px;
+            margin: 60px 30px;
+            position: absolute;
+        }
+        #number{
+            width: 200px;
+            color: white;
+            position: absolute;
+            margin: 70px 80px;
+        }
+        #sms{
+            width: 35px;
+            height: 35px;
+            margin: 140px 30px;
+            position: absolute;
+        }
+        #msg{
+            width: 200px;
+            color: white;
+            position: absolute;
+            margin: 150px 80px;
+        }
+        #email{
+            width: 35px;
+            height: 35px;
+            margin: 210px 20px;
+            position: absolute;
+        }
+        #mail{
+            width: 200px;
+            color: white;
+            position: absolute;
+            margin: 220px 57px;
+        }
+    </style>
+    <div id="main">
+
+        <div id="navbar">
+
+            <div id="logo">
+                <img src="images/LOGO.png">
+            </div>
+            <div class="nav-menu">
+                <a href="" class="active"> Home</a>
+                <a href="">Apps</a>
+                <a href="">Software</a>
+                <a href="">Books</a>
+                <a href="">Notes</a>
+                <a href="">About Us</a>
+                <input type="search" name="search" id="search">
+              <a href="">  <img src="images/search.png"id="search-icon"></a>
+            </div>
+        </div>
+
+        <div id="header">
+            <img src="images/header.jpg" class="h-img">
+        </div>
+
+        <p id="slogan">Join & Get Free Info</p>
+        <h4> your Desire apps software book and Notes for your study perpsoe</h4>
+    </div>
+
+      
+    <div id="box">    
+      <a href=""> <img src="images/andorid.png" class="ard"></a>
+       <a href=""> <img src="images/software.png" class="software"></a>
+        <a href=""><img src="images/books.png" class="books"></a>
+        <a href=""><img src="images/notes.png" class="notes"></a>
+        
+    </div>
+    <div id="detail">
+        <p id="About1">Get your Desire app for your smartphoen</p>
+        <p id="About2">You can download your best softwares for your pc</p>
+        <p id="About3">For your study perpose Download now your books</p>
+        <p id="About4">you can easly download computer related notes</p>
+        <div>
+            <button id="os">Our Service</button>
+        </div>
+    </div>
+
+    <div id="offer">
+
+            <p id="course"> Online Course</p>
+            <button id="more">More Visit</button>
+           <a href="https://www.google.com"> <img src="images/Ai.jpg" class="Ai"></a>
+            <img src="images/php.jpg" class="php">
+            <img src="images/web.jpg" class="web">
+
+            <p id="course1"> Artifical Intelligent</p>
+            <p id="course2"> Web Development</p>
+            <p id="course3"> App Development</p>
+
+            <p id="detail1">Bulid your own machine</p>
+            <p id="detail2">Get free course bulid your pages</p>
+            <p id="detail3">After course create your desire Apps</p>
+        </div>
+
+            <div id="body3">
+                <p id="offering"> What We Offer</p>
+                <h4 id="option"> Your Desire Apps Software Book and Notes for your study perpsoe Your Desire Apps Software Book and Notes for your study perpsoe</h4>
+
+                <p id="option1"> Artifical Intelligent</p>
+                <p id="option2"> Web Development</p>
+                <p id="option3"> App Development</p>
+
+                <p id="define1">Bulid your own machine  Bulid your own machine Bulid your own machine Bulid your own machine</p>
+                <p id="define2">Get free course bulid your pages Get free course bulid your pages Get free course bulid your pages</p>
+                <p id="define3">After course create your desire Apps After course create your desire Apps After course create your desire Apps</p>
+            </div>
+            <div id="body4">
+                <p id="team">Our Team</p>
+                <p id="team-define">Our Team Will Be lead in any suition if your required any type of required we will be serve you with new opertunities
+                    Our Team Will Be lead in any suition if your required any type of required we will be serve you with new opertunities
+                    Our Team Will Be lead in any suition if your required any type of required we will be serve you with new opertunities
+                </p>
+                <img src="images/team1.png" class="team1">
+                <img src="images/team2.png" class="team2">
+                <img src="images/team3.png" class="team3">         
+            </div>
+            <div id="footer">     
+                
+                <div id="box1">
+                    <p id="bird">BIRD FEEDS</p>
+                    <p class="para">join this site and get great opertunities
+                        www.asbn.com.pk
+                        2weeks ago
+                        </p>
+                        <p class="para2">join this site and get great opertunities
+                            www.asbn.com.pk
+                            2weeks ago
+                            </p> 
+                </div>
+
+
+                <div id="box2">
+                    <p id="news">NEWSLETTER</p>
+                    <p class="para3">join this site and get great opertunities join this site and get great opertunities join this site and get great opertunities
+                        </p>
+                         <p class="email">Your Email address</p>
+                         <input type="email" name="email" id="in-email">
+                         <button id="s-up">Sign up</button>
+                </div>
+
+
+                <div id="box3">
+                    <p id="project">RECENT PROJECT</p>
+                    <div id="ractangle1"></div>
+                    <p class="ract-para1">join this site and get great opertunities
+                        www.asbn.com.pk
+                        2weeks ago
+                        </p>
+                    <div id="ractangle2"></div>
+                    <div id="ractangle3"></div>
+                    
+                </div>
+                <div id="box4">
+                    <p id="Contact">CONTACT</p>
+                    <img src="images/call.png"id="call">
+                    <p id="number">+92-334-2009908</p>
+
+                    <img src="images/sms.png" id="sms">
+                    <p id="msg">+92-311-1715320</p>
+                    <img src="images/email.png"id="email">
+                    <p id="mail">Sanaullahjaan8@gmail.com</p>
+                </div>
+            </div>
+    </div>
+</BOdy>
+
+</html>
